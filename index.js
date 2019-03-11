@@ -13,7 +13,13 @@ const puppeteer = require('puppeteer');
   await page.type('#cik', ticker)
   await page.click('#cik_find')
 
+  //10q format different before 2010
+  await page.waitForSelector('#type')
+  await page.type('input#type', '10-Q')
+  await page.select('select#count', '100')
+  await page.click('input[value=Search')
 
+  await page.waitFor(2000)
 
   await browser.close();
 })();
