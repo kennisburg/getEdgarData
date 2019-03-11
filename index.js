@@ -10,6 +10,9 @@ const puppeteer = require('puppeteer');
 
   await page.goto(edgarSearch)
 
+  await page.type('#cik', ticker)
+  await page.click('#cik_find')
+
 
 
   await browser.close();
