@@ -1,3 +1,1 @@
-console.log(Math.ceil((Math.random() * 300) + 200))
-
-
+```npm i sequelize pg pg-hstore```
