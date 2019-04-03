@@ -16,10 +16,9 @@ const delay = Math.ceil((Math.random() * 300) + 200);
   await page.type('#cik', ticker, {delay:delay})
   await page.click('#cik_find')
 
-  //10q format different before 2010
   await page.waitForSelector('#type')
   await page.type('input#type', '10-Q', {delay:delay})
-  await page.select('select#count', '100')
+  // await page.select('select#count', '100')
   await page.click('input[value=Search]')
 
   await page.waitFor(2000)
