@@ -29,7 +29,15 @@ const delay = Math.ceil((Math.random() * 300) + 200);
     return docs.map((doc) => doc.href)
   })
 
-  console.log(content)
+  for(var i of content){
+    await page.goto(i)
+
+    console.log(page.evaluate(() => {
+      let files = [...document.querySelectorAll('tr')]
+      .find(e=>e.innerText.includes('10-Q'))
+      .querySelector('a')
+    }))
+  }
 
   await browser.close();
 })();
