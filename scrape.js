@@ -29,15 +29,22 @@ const delay = Math.ceil((Math.random() * 300) + 200);
     return docs.map((doc) => doc.href)
   })
 
+  let tenq = []
+
   for(var i of content){
     await page.goto(i)
 
-    console.log(page.evaluate(() => {
-      let files = [...document.querySelectorAll('tr')]
+    let tr = await page.evaluate(() => {
+      return [...document.querySelectorAll('tr')]
       .find(e=>e.innerText.includes('10-Q'))
       .querySelector('a')
-    }))
+      .href
+    })
+
+    tenq.push(tr)
   }
+
+  console.log(tenq)
 
   await browser.close();
 })();
