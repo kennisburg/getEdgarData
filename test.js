@@ -4,14 +4,23 @@ const request = require('request');
 
 const cheerio = require('cheerio');
 
+
+
 request(test, (error, res, html) => {
   if (!error && res.statusCode == 200) {
     // console.log(html)
 
     const $ = cheerio.load(html)
 
-    const table = $('tbody')
+    const table = $("tbody:contains('Cash and cash equivalents')")
 
-    console.log(table)
+    const items = []
+
+    items.push(table.text().replace(/(\n|\t)/gm, ''));
+
+    console.log(items)
+
+
+
   }
 })
