@@ -14,11 +14,11 @@ request(test, (error, res, html) => {
 
     const table = $("tbody:contains('Cash and cash equivalents')")
 
-    const items = []
+    
 
-    items.push(table.text().replace(/(\n|\t)/gm, ''));
+    const items = table.text().split(/[\n|\t]/).filter(el => el.trim().length).map(el => el.trim());
 
-    console.log(items)
+    console.log(items.length)
 
 
 
