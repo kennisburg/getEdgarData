@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
   res.send(`<html>
               <body>
-                Get 10Qs
+                Get Quarterly Filings
               </body>
             </html>\n`);
 });
