@@ -1,3 +1,4 @@
 {
-  "python.pythonPath": "C:\\Users\\Kenny\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
+  "python.pythonPath": "C:\\Users\\Kenny\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+  "vscode_custom_css.imports": ["file://C:\\Users\\Kenny\\synthwave84.css"]
 }
