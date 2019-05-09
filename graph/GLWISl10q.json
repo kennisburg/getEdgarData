@@ -11,7 +11,7 @@
       "FilingDate": "2019-05-03T00:00:00",
       "FilingCount": 16,
       "Data": {
-        "Revenues": 2812000000.0,
+        "SalesRevenueGoodsNet": 2812000000.0,
         "CostOfRevenue": 1713000000.0,
         "GrossProfit": 1099000000.0,
         "SellingGeneralAndAdministrativeExpense": 401000000.0,
@@ -40,7 +40,7 @@
       "FilingDate": "2019-02-12T00:00:00",
       "FilingCount": 16,
       "Data": {
-        "Revenues": 11290000000.0,
+        "SalesRevenueGoodsNet": 11290000000.0,
         "CostOfRevenue": 6829000000.0,
         "GrossProfit": 4461000000.0,
         "SellingGeneralAndAdministrativeExpense": 1799000000.0,
@@ -70,7 +70,7 @@
       "FilingDate": "2018-10-24T00:00:00",
       "FilingCount": 16,
       "Data": {
-        "RevenueFromContractWithCustomerExcludingAssessedTax": 3008000000.0,
+        "SalesRevenueGoodsNet": 3008000000.0,
         "CostOfRevenue": 1776000000.0,
         "GrossProfit": 1232000000.0,
         "SellingGeneralAndAdministrativeExpense": 439000000.0,
@@ -100,7 +100,7 @@
       "FilingDate": "2018-07-27T00:00:00",
       "FilingCount": 16,
       "Data": {
-        "RevenueFromContractWithCustomerExcludingAssessedTax": 2747000000.0,
+        "SalesRevenueGoodsNet": 2747000000.0,
         "CostOfRevenue": 1675000000.0,
         "GrossProfit": 1072000000.0,
         "SellingGeneralAndAdministrativeExpense": 412000000.0,
@@ -130,7 +130,7 @@
       "FilingDate": "2018-04-26T00:00:00",
       "FilingCount": 16,
       "Data": {
-        "RevenueFromContractWithCustomerExcludingAssessedTax": 2500000000.0,
+        "SalesRevenueGoodsNet": 2500000000.0,
         "CostOfRevenue": 1545000000.0,
         "GrossProfit": 955000000.0,
         "SellingGeneralAndAdministrativeExpense": 501000000.0,

@@ -14,7 +14,7 @@ name = ''
 comp = ''
 
 
-with open(os.path.join(sys.path[0], 'GLWBSl10q.json'), 'r') as f:
+with open(os.path.join(sys.path[0], 'MSGBS.json'), 'r') as f:
 
   num = 0
   g = json.load(f)
@@ -27,10 +27,11 @@ with open(os.path.join(sys.path[0], 'GLWBSl10q.json'), 'r') as f:
 
   for i in g['result']:
 
-    if i["Source"] == "10-Q":
+    if i["Quarter"] == 'Q1':
       a = i["Quarter"] + ' ' + i["FilingDate"][:4]
-    if i["Source"] == "10-K":
+    if i["Quarter"] != 'Q1':
       a = i["Quarter"] + ' ' + str(int(i["FilingDate"][:4]) - 1)
+
 
     for j in i["Data"]:
       if grouped.get(j) == None:
@@ -40,6 +41,8 @@ with open(os.path.join(sys.path[0], 'GLWBSl10q.json'), 'r') as f:
       grouped[k][a] = i["Data"][k]
 
 alldata["Data"] = grouped
+
+# print(alldata)
 
 print('#########################')
 print('')
@@ -111,3 +114,4 @@ plt.bar(y_pos, vertical)
 plt.xticks(y_pos, horizontal)
 
 plt.show()
+
