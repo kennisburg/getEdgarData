@@ -1,5 +1,6 @@
 # corning
-test = 'https://www.sec.gov/Archives/edgar/data/24741/000002474118000053/glw-20180930x10q.htm'
+# test = 'https://www.sec.gov/Archives/edgar/data/24741/000002474118000053/glw-20180930x10q.htm'
+test = 'https://www.sec.gov/Archives/edgar/data/24741/000002474119000026/glw-20190331x10q.htm'
 
 
 # tesla
@@ -24,18 +25,18 @@ from bs4 import BeautifulSoup
 
 
 
-page = urlopen(test).read()
+# page = urlopen(test).read()
 
 # print(page)
 
-soup = BeautifulSoup(page, 'lxml')
+# soup = BeautifulSoup(page.content, 'lxml')
 
 
 # for tds in soup.find_all('td'):
-  # print(tds.text.encode('utf-8', 'ignore').strip())
-  # print(tds.text.encode('utf-8').strip())
-  # print(str(tds.text.encode('utf-8').split()))
-  # print(type(str(tds.text.encode('utf-8'))))
+#   print(tds.text.encode('utf-8', 'ignore').strip())
+#   print(tds.text.encode('utf-8').strip())
+#   print(str(tds.text.encode('utf-8').split()))
+#   print(type(str(tds.text.encode('utf-8'))))
 
 
 data=[]
@@ -80,11 +81,20 @@ soup = BeautifulSoup(req.content, "html.parser")
 
 # print(rows)
 
+# para = soup.find_all('font', text=re.compile('CONSOLIDATED STATEMENTS OF INCOME'))
+# print(para)
 
-for table in soup.find_all('table'):
-  for row in table.findAll('tr'):
-    for cel in row.findAll('td'):
-      text = cel.get_text(strip=True)
 
-      if text:   # skip blank lines
-        print(text)
+for i in soup.find(text=re.compile('CONSOLIDATED STATEMENTS OF INCOME')).parent.next_siblings:
+  if i.name == 'div':
+    print(i)
+    break
+  # print(i)
+
+# for table in soup.find_all('table'):
+#   for row in table.findAll('tr'):
+#     for cel in row.findAll('td'):
+#       text = cel.get_text(strip=True)
+
+#       if text:   # skip blank lines
+#         print(text)

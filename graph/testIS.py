@@ -33,12 +33,6 @@ with open(os.path.join(sys.path[0], 'GLWISl10q.json'), 'r') as f:
       a = i["Quarter"] + ' ' + str(int(i["FilingDate"][:4]) - 1)
 
 
-    # print(a)
-
-    # for j in i['Data']:
-    #   print(j)
-    #   print(i['Data'][j])
-    #   print('')
 
     for j in i["Data"]:
       if grouped.get(j) == None:
@@ -49,36 +43,39 @@ with open(os.path.join(sys.path[0], 'GLWISl10q.json'), 'r') as f:
 
 alldata["Data"] = grouped
 
+
+###############################################################
+
 keys = []
 for i in alldata['Data']:
   keys.append(i)
-  # print(i)
 
-print(keys)
+
 keysi = len(keys)
 
 for i in range(keysi):
   key2 = []
-  # print(keys[i])
-  # print(i)
-  # print(alldata['Data'][keys[i]])
 
   for j in alldata['Data'][keys[i]]:
     key2.append(j)
-    # print(keys[i])
-  #   print(j)
-  #   print(alldata['Data'][keys[i]][j])
   
   key2i = len(key2)
-  # print(key2)
 
-  print('#########')
 
-  for k in range(key2i):
-    print(key2[k][:2])
-    if key2[k][:2] == 'Q4':
-      if key2[k+1][:2] == 'Q3':
-        
+  print('################################')
+
+  print(keys[i])
+  print(key2)
+
+
+  # for k in range(key2i):
+  #   # print(key2[k][:2])
+  #   print(key2[k])
+  #   print(alldata['Data'][keys[i]][key2[k]])
+
+    # if key2[k][:2] == 'Q4':
+    #   if key2[k+1][:2] == 'Q3':
+
 
 
 

@@ -28,7 +28,13 @@ page = requests.get(test)
 
 doc = lh.fromstring(page.content)
 
+
 tr_elmt = doc.xpath('//tr')
 
+content = []
+
 for T in tr_elmt:
-  print(T.text_content().encode('utf-8'))
+  # print(T.text_content())
+  content.append(T.text())
+
+print(content)
